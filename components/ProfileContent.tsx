@@ -14,6 +14,7 @@ export default function ProfileContent() {
                         alt="Minha foto"
                     />
                 </div>
+
                 <div className="w-full h-[45%] mt-8 flex items-center flex-col flex-1 gap-y-3">
                     <h1 className="text-3xl text-center text-zinc-700 font-semibold">Victor S. Fernandes</h1>
                     <p className="text-md text-center text-blue-500 font-semibold">Desenvolvedor Fullstack</p>
@@ -25,6 +26,7 @@ export default function ProfileContent() {
                         <LinkSocial icon='/assets/icons/whatsapp_line.svg' link="#" />
                     </div>
                 </div>
+                
                 <div className="w-full flex flex-row">
                     <Link className="uppercase flex-1 border-t hover:bg-sky-200 duration-500 p-6 text-center" href='#'>Baixar CV</Link>
                     <Link className="uppercase flex-1 border-t hover:bg-sky-200 duration-500 border-l p-6 text-center" href='#'>Entrar em Contato</Link>
