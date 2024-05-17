@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import ProfileContent from '@/components/ProfileContent'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +17,30 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className="relative w-screen h-screen flex justify-center items-center p-[5%]">
+          <video
+            autoPlay
+            muted
+            loop
+            className="absolute top-0 left-0 w-full h-full object-cover z-[-1]"
+          >
+            <source src="/assets/videos/bobbles.mp4" type="video/mp4" />
+            Seu navegador não tem suporte para esse formato de video.
+          </video>
+
+          <div className="relative z-[1] h-full w-full max-w-[1280px]">
+            <div className="w-full h-full flex relative">
+              <ProfileContent />
+              <div className="h-full flex-1 py-3">
+                <div className="bg-blue-100 shadow bg-opacity-80 h-full flex-1 rounded-r-lg">
+                  {children}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </body>
     </html>
   );
 }
