@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import ProfileContent from '@/components/ProfileContent'
+import Header from "@/components/Head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,8 +18,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
+      <head>
+        <Header
+          title="VictorSF - Desenvolvedor Fullstack"
+          description="Sou um desenvolvedor fullstack com uma abordagem completa para o desenvolvimento de software, desde a gestão de projetos até o deploy final. Atualmente, concentro minha atuação no ecossistema PHP, com um forte domínio do framework Laravel, que é amplamente reconhecido pela sua eficiência e poder."
+          image=""
+          url="https://www.victorsf.com.br"
+        />
+      </head>
       <body className={inter.className}>
-        <div className="relative w-screen h-screen flex justify-center items-center p-[5%]">
+        <div className="relative w-screen h-screen flex justify-center items-center p-[5%] text-zinc-700">
           <video
             autoPlay
             muted
@@ -35,9 +44,7 @@ export default function RootLayout({
             <div className="w-full h-full flex relative">
               <ProfileContent />
               <div className="h-full flex-1 py-3">
-                <div className="bg-blue-100 shadow bg-opacity-80 h-full flex-1 rounded-r-lg">
                   {children}
-                </div>
               </div>
             </div>
           </div>
