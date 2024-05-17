@@ -72,7 +72,6 @@ export default function Home() {
         <TitleSection title='Clientes' />
 
         <TitleSection title='Meus Serviços' />
-
       </div>
     </div>
   );
