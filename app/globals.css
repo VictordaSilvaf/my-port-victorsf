@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 :root {
-    --primary: #f1f1f11f;
-    --secondary: rgba(68, 200, 233, 0.37);
-    --tertiary: rgba(31, 209, 253, 0.096);
+    --primary: #4193e02d;
+    --secondary: rgba(59, 131, 246, 0.459);
+    --tertiary: rgba(59, 131, 246, 0.315);
 }
 
 /* Firefox */
