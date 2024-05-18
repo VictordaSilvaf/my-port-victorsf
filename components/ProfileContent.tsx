@@ -30,7 +30,7 @@ export default function ProfileContent() {
 
                 <div className="w-full flex flex-row">
                     <Link className="uppercase flex-1 border-t hover:bg-sky-200 duration-500 p-6 text-center" href='#'>Baixar CV</Link>
-                    <Link className="uppercase flex-1 border-t hover:bg-sky-200 duration-500 border-l p-6 text-center" href='#'>Entrar em Contato</Link>
+                    <Link className="uppercase flex-1 border-t hover:bg-sky-200 duration-500 border-l p-6 text-center" href='/contato'>Entrar em Contato</Link>
                 </div>
             </div>
             <div className="bg-sky-200 opacity-50 h-full w-full rounded-lg -top-3 -left-4 absolute z-0"></div>
