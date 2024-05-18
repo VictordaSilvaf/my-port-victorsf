@@ -1,16 +1,28 @@
 import CardService from "@/components/CardService";
-import Header from "@/components/Head";
 import TitleSection from "@/components/TitleSection";
+import { Button } from "@nextui-org/react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "VictorSF - Desenvolvedor Fullstack",
+  description: "Sou um desenvolvedor fullstack com uma abordagem completa para o desenvolvimento de software, desde a gestão de projetos até o deploy final. Atualmente, concentro minha atuação no ecossistema PHP, com um forte domínio do framework Laravel, que é amplamente reconhecido pela sua eficiência e poder.",
+  generator: 'Next.js',
+  applicationName: 'VictorSF',
+  referrer: 'origin-when-cross-origin',
+  keywords: ['Victor da Silva Fernandes', 'VictorSF', 'VictorDev'],
+  authors: [{ name: 'Victor S. Fernandes' }],
+  creator: 'Victor S. Fernandes',
+  publisher: 'Victor S. Fernandes',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+}
 
 export default function Home() {
   return (
-    <div className="w-full h-full flex-1 relative overflow-y-auto">
-      <Header
-        title="VictorSF - Desenvolvedor Fullstack"
-        description="Sou um desenvolvedor fullstack com uma abordagem completa para o desenvolvimento de software, desde a gestão de projetos até o deploy final. Atualmente, concentro minha atuação no ecossistema PHP, com um forte domínio do framework Laravel, que é amplamente reconhecido pela sua eficiência e poder."
-        image=""
-        url="https://www.victorsf.com.br"
-      />
+    <div className="w-full h-full flex-1 relative overflow-y-auto overflow-hidden">
       <div className="w-full h-full flex-1 absolute">
         <TitleSection title='Sobre mim' />
 

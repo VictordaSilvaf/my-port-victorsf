@@ -2,6 +2,7 @@ import Image from "next/image";
 import LinkSocial from "./LinkSocial";
 import UserImage from "@/public/assets/images/user_image.jpg";
 import Link from "next/link";
+import NavLink from "./NavLink";
 
 export default function ProfileContent() {
     return (
@@ -33,6 +34,20 @@ export default function ProfileContent() {
                 </div>
             </div>
             <div className="bg-sky-200 opacity-50 h-full w-full rounded-lg -top-3 -left-4 absolute z-0"></div>
+
+            <div className="absolute -left-2 -translate-x-full top-4 flex flex-col gap-y-4">
+                <div className="w-20 bg-white rounded-md shadow-lg">
+                    <NavLink title={null} icon='/assets/icons/navIcons/menu.svg' link='#' />
+                </div>
+
+                <div className="w-20 bg-white rounded-md shadow-lg overflow-hidden">
+                    <NavLink title={'sobre'} icon='/assets/icons/navIcons/user.svg' link='/' />
+                    <NavLink title={'curriculo'} icon='/assets/icons/navIcons/web_13011352.svg' link='/curriculo' />
+                    <NavLink title={'trabalhos'} icon='/assets/icons/navIcons/layers_563119.svg' link='/trabalhos' />
+                    <NavLink title={'postagens'} icon='/assets/icons/navIcons/note_15006934.svg' link='/postagens' />
+                    <NavLink title={'contato'} icon='/assets/icons/navIcons/email.svg' link='/contato' />
+                </div>
+            </div>
         </section>
     )
 } 
