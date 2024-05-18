@@ -1,16 +1,21 @@
+'use client';
 import Image from "next/image";
 import LinkSocial from "./LinkSocial";
-import UserImage from "@/public/assets/images/user_image.jpg";
+import UserImage from "@/public/assets/images/eu3.jpg";
 import Link from "next/link";
 import NavLink from "./NavLink";
 
 export default function ProfileContent() {
+    function openDrawer() {
+        alert('abrindo')
+    }
+
     return (
-        <section className=" h-full w-[480px] rounded-lg relative">
+        <section className="h-full w-full md:w-[480px] rounded-lg relative">
             <div className="bg-white shadow h-full w-full rounded-lg overflow-hidden relative z-[1] flex flex-col flex-grow">
                 <div className="w-full h-[55%] rounded-t-lg rounded-b-[100%] shadow-xl overflow-hidden">
                     <Image
-                        className="h-full w-full object-cover object-center"
+                        className="h-auto max-h-[350px] w-full object-cover object-center"
                         src={UserImage}
                         alt="Minha foto"
                     />
@@ -35,12 +40,14 @@ export default function ProfileContent() {
             </div>
             <div className="bg-sky-200 opacity-50 h-full w-full rounded-lg -top-3 -left-4 absolute z-0"></div>
 
-            <div className="absolute -left-2 -translate-x-full top-4 flex flex-col gap-y-4">
+            <div className="absolute md:-left-2 md:-translate-x-full md:top-4 flex flex-col gap-y-4 -top-4 -translate-y-full md:-translate-y-0">
                 <div className="w-20 bg-white rounded-md shadow-lg">
-                    <NavLink title={null} icon='/assets/icons/navIcons/menu.svg' link='#' />
+                    <button onClick={() => openDrawer()}>
+                        <NavLink title={null} icon='/assets/icons/navIcons/menu.svg' link='#' />
+                    </button>
                 </div>
 
-                <div className="w-20 bg-white rounded-md shadow-lg overflow-hidden">
+                <div className="md:w-20 bg-white rounded-md shadow-lg overflow-hidden flex flex-row md:flex-col">
                     <NavLink title={'sobre'} icon='/assets/icons/navIcons/user.svg' link='/' />
                     <NavLink title={'curriculo'} icon='/assets/icons/navIcons/web_13011352.svg' link='/curriculo' />
                     <NavLink title={'trabalhos'} icon='/assets/icons/navIcons/layers_563119.svg' link='/trabalhos' />

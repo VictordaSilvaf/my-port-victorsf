@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body className={inter.className}>
-        <div className="relative w-screen h-screen flex justify-center items-center p-[5%] text-zinc-700">
+        <div className="relative w-screen md:h-screen min-h-screen h-full flex justify-center items-center md:px-[150px] text-zinc-700">
           <video
             autoPlay
             muted
@@ -32,11 +32,12 @@ export default function RootLayout({
             Vídeo de <a href="https://pixabay.com/pt/users/tommyvideo-3092371/?utm_source=link-attribution&utm_medium=referral&utm_campaign=video&utm_content=121639">Tomislav Jakupec</a> no <a href="https://pixabay.com/pt//?utm_source=link-attribution&utm_medium=referral&utm_campaign=video&utm_content=121639">Pixabay</a>
           </video>
 
-          <div className="relative z-[1] h-full w-full max-w-[1280px] max-h-[650px]">
-            <div className="w-full h-full flex relative">
+          <div className="relative z-[1] h-full w-full px-6 md:px-0 md:max-w-[1280px] md:max-h-[600px] pt-28 md:pt-0">
+            <div className="w-full h-full flex relative justify-center flex-col md:flex-row">
               <NextUIProvider>
                 <ProfileContent />
               </NextUIProvider>
+
               <div className="h-full flex-1 py-3">
                 {children}
               </div>

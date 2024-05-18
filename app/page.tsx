@@ -1,6 +1,5 @@
 import CardService from "@/components/CardService";
 import TitleSection from "@/components/TitleSection";
-import { Button } from "@nextui-org/react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -22,7 +21,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="w-full h-full flex-1 relative overflow-y-auto overflow-hidden">
+    <div className="w-full h-full flex-1 relative overflow-y-auto">
       <div className="w-full h-full flex-1 absolute">
         <TitleSection title='Sobre mim' />
 
@@ -34,19 +33,27 @@ export default function Home() {
           </div>
           <div className="flex flex-col p-6 gap-y-6">
             <div className="flex flex-row justify-between border-b-[0.2px] border-blue-400 pb-2">
-              <h4 className="bg-blue-500 text-white px-3 py-0.5">Idade . . .</h4>
+              <div className="">
+                <h4 className="bg-blue-500 text-white px-3 py-0.5 whitespace-nowrap">Idade</h4>
+              </div>
               <p>24</p>
             </div>
             <div className="flex flex-row justify-between border-b-[0.2px] border-blue-400 pb-2">
-              <h4 className="bg-blue-500 text-white px-3 py-0.5">Pais . . .</h4>
+              <div className="">
+                <h4 className="bg-blue-500 text-white px-3 py-0.5 whitespace-nowrap">Pais</h4>
+              </div>
               <p>Brasil</p>
             </div>
             <div className="flex flex-row justify-between border-b-[0.2px] border-blue-400 pb-2">
-              <h4 className="bg-blue-500 text-white px-3 py-0.5">Disponibilidade . . .</h4>
-              <p>Noweb Publicidade</p>
+              <div className="">
+                <h4 className="bg-blue-500 text-white px-3 py-0.5 whitespace-nowrap">Disponibilidade</h4>
+              </div>
+              <p className="whitespace-nowrap">Noweb</p>
             </div>
             <div className="flex flex-row justify-between border-b-[0.2px] border-blue-400 pb-2">
-              <h4 className="bg-blue-500 text-white px-3 py-0.5">Endereço . . .</h4>
+              <div className="">
+                <h4 className="bg-blue-500 text-white px-3 py-0.5 whitespace-nowrap">Endereço</h4>
+              </div>
               <p>São Paulo, SP</p>
             </div>
           </div>
